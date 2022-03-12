@@ -18,7 +18,4 @@ pip3 install -r requirements.txt
 echo "*** Deactivating Python3 virtualenv..."
 deactivate
 
-echo "*** Copy config file..."
-cp "$TARGETDIR/fan_control.yaml" "/tmp/fan_control.yaml"
-
 set +e
