@@ -7,5 +7,7 @@ WORKDIR /fancontroller
 RUN git clone --branch docker https://github.com/MainFighter/r710-fan-controller.git /fancontroller
 RUN bash /fancontroller/install.sh
 
-#ENTRYPOINT ["/fancontroller/venv/bin/python3", "-u", "/fancontroller/fan_control.py", "--config", "/fancontroller/fan_control.yaml"]
-ENTRYPOINT ["/bin/bash", "/fancontroller/run.sh"]
+COPY /fancontroller/fan_control.yaml /fancontroller/config/fan_control.yaml
+
+ENTRYPOINT ["/fancontroller/venv/bin/python3", "-u", "/fancontroller/fan_control.py", "--config", "/fancontroller/fan_control.yaml"]
+#ENTRYPOINT ["/bin/bash", "/fancontroller/run.sh"]
