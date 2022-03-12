@@ -5,8 +5,8 @@ set -e
 TARGETDIR="/fancontroller"
 
 echo "*** Config file..."
-if [ ! -d "$TARGETDIR/fancontrol/config" ]; then
-    mkdir $TARGETDIR/fancontrol/config
+if [ ! -d "$TARGETDIR/config" ]; then
+    mkdir $TARGETDIR/config
 fi
 if [ ! -f "$TARGETDIR/fan_control.yaml" ]; then
     cp "/tmp/fan_control.yaml" "$TARGETDIR/config/fan_control.yaml"
