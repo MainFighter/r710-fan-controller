@@ -6,6 +6,7 @@ WORKDIR /fancontroller
 
 RUN git clone --branch docker https://github.com/MainFighter/r710-fan-controller.git /fancontroller
 RUN bash /fancontroller/install.sh
+RUN mkdir /fancontroller/config
 
 COPY fan_control.yaml /fancontroller/config/fan_control.yaml
 
