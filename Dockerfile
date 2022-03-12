@@ -4,8 +4,8 @@ RUN apk add --no-cache tzdata build-base python3 python3-dev py3-virtualenv ipmi
 
 WORKDIR /fancontroller
 
-#RUN git clone --branch docker https://github.com/MainFighter/r710-fan-controller.git /fancontroller
-#RUN bash /fancontroller/install.sh
+RUN git clone --branch docker https://github.com/MainFighter/r710-fan-controller.git /fancontroller
+RUN bash /fancontroller/install.sh
 
 #ENTRYPOINT ["/fancontroller/venv/bin/python3", "-u", "/fancontroller/fan_control.py", "--config", "/fancontroller/fan_control.yaml"]
-ENTRYPOINT ["/bin/bash", "/fancontroller/docker.sh"]
+ENTRYPOINT ["/bin/bash", "/fancontroller/run.sh"]
