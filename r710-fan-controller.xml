@@ -34,7 +34,7 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/r710-fan-controller/fan_control.xml</HostDir>
-      <ContainerDir>/fancontroller/fan_control.xml</ContainerDir>
+      <ContainerDir>/fancontroller/config/fan_control.xml</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
