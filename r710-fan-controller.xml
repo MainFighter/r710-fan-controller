@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/MainFighter/r710-fan-controller/docker/r710-fan-controller.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Downloaders:</Category>
+  <Name>r710-fan-controller</Name>
+  <Description>
+    [b]Description[/b][br]
+    A temperature-based fan speed controller for Dell servers (tested on an R710, should work with most PowerEdges). Supports both local and remote hosts.
+  </Description>
+  <Overview>
+  A temperature-based fan speed controller for Dell servers (tested on an R710, should work with most PowerEdges). Supports both local and remote hosts.
+  </Overview>
+  <Support>https://github.com/MainFighter/r710-fan-controller/tree/docker</Support>
+  <ReadMe>https://github.com/MainFighter/r710-fan-controller/tree/docker</ReadMe>
+  <Registry>https://github.com/MainFighter/r710-fan-controller/pkgs/container/r710-fan-controller</Registry>
+  <GitHub>https://github.com/MainFighter/r710-fan-controller/tree/docker</GitHub>
+  <Repository>ghcr.io/mainfighter/r710-fan-controller:docker</Repository>
+  <Project>https://github.com/MainFighter/r710-fan-controller/tree/docker</Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <!--
+      <Port>
+        <HostPort>8112</HostPort>
+        <ContainerPort>8112</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      -->
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/r710-fan-controller</HostDir>
+      <ContainerDir>/fancontroller/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/2048px-Dell_Logo.svg.png</Icon>
+  <DonateText>If you appreciate my work, then please consider buying me a beer :D</DonateText>
+  <DonateLink>https://paypal.me/mainfighterdonations</DonateLink>
+  <DonateImg>https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif</DonateImg>
+  <ExtraParams>--device=/dev/ipmi0</ExtraParams>
+</Containers>
